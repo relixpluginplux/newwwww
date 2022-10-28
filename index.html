@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Primary Meta Tags -->
+    <title>YouTube To MP3 Downloader— Convert YouTube Video To MP3</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/youtube.png" />
+    <meta
+      name="title"
+      content="YouTube To MP3 Downloader— Convert YouTube Video To MP3"
+    />
+    <meta
+      name="description"
+      content="YouTubeToMP3Downloader - easily convert youtube video to mp3 and download for free..."
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://metatags.io/" />
+    <meta
+      property="og:title"
+      content="YouTube To MP3 Downloader— Convert YouTube Video To MP3"
+    />
+    <meta
+      property="og:description"
+      content="YouTubeToMP3Downloader - easily convert youtube video to mp3 and download for free..."
+    />
+    <meta property="og:image" content="./assets/images/youtube.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://metatags.io/" />
+    <meta
+      property="twitter:title"
+      content="YouTube To MP3 Downloader— Convert YouTube Video To MP3"
+    />
+    <meta
+      property="twitter:description"
+      content="YouTubeToMP3Downloader - easily convert youtube video to mp3 and download for free..."
+    />
+    <meta property="twitter:image" content="./assets/images/youtube.png" />
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.2/examples/starter-template/"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom styles for this template -->
+    <link href="./assets/css/main.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="col-lg-8 mx-auto p-4 py-md-5">
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a
+          href="/"
+          class="d-flex align-items-center text-dark text-decoration-none"
+        >
+          <img
+            src="./assets/images/youtube.png"
+            alt="YouTubeToMP3Downloader"
+            class="img-res"
+          />
+          <span class="fs-4 text-danger fw-bold">YouTube to MP3</span>
+        </a>
+      </header>
+
+      <main>
+        <div>
+          <h1>Download YouTube Video in MP3 audio</h1>
+          <p class="fs-5 col-md-8">
+            Quickly and easily download your YouTube video to MP3 for free.
+            Paste your link into the input and press the
+            <span class="fw-bold text-danger">DOWNLOAD</span> button
+          </p>
+
+          <div class="mb-5 col-md-6 col-sm-12">
+            <div
+              id="alert"
+              class="alert alert-warning d-flex align-items-center d-none"
+              role="alert"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+                viewBox="0 0 16 16"
+                role="img"
+                aria-label="Warning:"
+              >
+                <path
+                  d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                />
+              </svg>
+              <span><strong>Ooops! </strong> no valid YouTube link found.</span>
+            </div>
+            <div
+              id="warning"
+              class="alert alert-danger d-flex align-items-center d-none"
+              role="alert"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="currentColor"
+                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2"
+                viewBox="0 0 16 16"
+                role="img"
+                aria-label="Warning:"
+              >
+                <path
+                  d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+                />
+              </svg>
+              <span
+                ><strong>Ooops! </strong>Error while processing! Please try
+                again</span
+              >
+            </div>
+            <form onsubmit="return false;">
+              <div class="input-group mb-3">
+                <input
+                  required
+                  type="text"
+                  id="link-input"
+                  class="form-control border border-3 rounded-0"
+                  placeholder="Paste a valid link"
+                  aria-label="link"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-lg rounded-0 btn-danger"
+                  type="button"
+                  id="download-button"
+                >
+                  <span
+                    id="loading"
+                    class="d-none spinner-border spinner-border-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                  Download
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="progress col-md-6 col-sm-12 mb-4 d-none">
+          <div
+            id="progressBar"
+            class="progress-bar"
+            role="progressbar"
+            style="width: 0%"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            0%
+          </div>
+        </div>
+        <div id="download-box" class="card display-none col-md-6 col-sm-12">
+          <div class="card-body">
+            <h6 class="fw-bold">
+              Title:
+              <span id="title" class="text-primary">
+                This is the the song title</span
+              >
+            </h6>
+            <!-- <p class="fw-semibold">
+              Duration:<span id="duration" class="text-primary">
+                1:30 mins</span
+              >
+            </p> -->
+            <a
+              id="download-mp3-button"
+              href=""
+              target="_blank"
+              class="btn rounded-0 btn-danger"
+              >Download mp3</a
+            >
+          </div>
+        </div>
+
+        <hr class="col-3 col-md-2 mb-5" />
+
+        <div class="row g-5">
+          <div class="col-md-4">
+            <h2>How To Download YouTube as MP3</h2>
+            <p>Check out the open source project on GitHub repository.</p>
+          </div>
+
+          <div class="col-md-4">
+            <h3>Steps</h3>
+            <ul class="icon-list ps-0">
+              <li class="d-flex align-items-start mb-1">
+                Copy YouTube link of your video
+              </li>
+              <li class="d-flex align-items-start mb-1">
+                Paste the link into the input field
+              </li>
+              <li class="d-flex align-items-start mb-1">Click download</li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <p>More Amazing Apps Coming Soon</p>
+            <ul class="icon-list ps-0">
+              <li class="d-flex align-items-start mb-1">
+                <a href="#">TikTok Video Downloader</a>
+              </li>
+              <li class="d-flex align-items-start mb-1">
+                <a href="#">Instagram Downloader</a>
+              </li>
+              <li class="d-flex align-items-start mb-1">
+                <a href="#">Twitter Downloader</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <footer class="pt-5 my-5 text-muted border-top">
+        Created by <a href="http://oheneadjei.com/">Ohene Adjei</a> &middot;
+        &copy; 2022
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./assets/js/app.js"></script>
+    <!-- <script>
+      $(document).ready(function () {
+        $("form").submit(function (e) {
+          e.preventDefault();
+          // or return false;
+        });
+      });
+    </script> -->
+  </body>
+</html>
